@@ -107,4 +107,7 @@ $('.search-wrapper input').on('input', function(){
         } 
     }); 
 
-
+// Регистрация.
+$('.registration').on('click', function(){
+	$('.hidden').toggleClass('hide')
+});

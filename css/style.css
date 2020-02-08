@@ -64,6 +64,13 @@ hr {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 40;
 }
+.hidden{
+	transition: 0.3s;
+	display: none;
+}
+.hide{
+	display: block;
+}
 .center-form button {
   margin-top: 40px;
   margin-bottom: 20px;
@@ -99,11 +106,11 @@ hr {
 .center-form a {
   text-decoration: none;
 }
-.center-form .registration {
+.registration {
   color: white;
   font-family: "Roboto Condensed", sans-serif;
 }
-.center-form .forgot {
+.forgot {
   color: #9c9c9c;
   font-family: "Roboto Condensed", sans-serif;
 }
