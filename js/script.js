@@ -90,3 +90,21 @@ infoLogo.addEventListener("click", function() {
   container.classList.toggle("modal-container-full");
   inf.classList.toggle("dop-inf-full");
 });
+
+
+// Функция поиска.
+$('.search-wrapper input').on('input', function(){ 
+        var str = $(this).val().toLowerCase(); 
+        if (str.length <= 0){ 
+                $('.ul > li').show(); 
+                } 
+            else { 
+            $('.ul > li').each(function(){ 
+                if ($(this).text().toLowerCase().indexOf(str) < 0){ 
+                $(this).hide(); 
+                } 
+            }); 
+        } 
+    }); 
+
+
