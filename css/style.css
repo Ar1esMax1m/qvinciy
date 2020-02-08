@@ -110,6 +110,12 @@ hr {
   color: white;
   font-family: "Roboto Condensed", sans-serif;
 }
+.signIn{
+	display: none;
+}
+.signInOpen{
+	display: block;
+}
 .forgot {
   color: #9c9c9c;
   font-family: "Roboto Condensed", sans-serif;

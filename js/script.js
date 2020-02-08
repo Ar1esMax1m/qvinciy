@@ -108,6 +108,16 @@ $('.search-wrapper input').on('input', function(){
     }); 
 
 // Регистрация.
-$('.registration').on('click', function(){
-	$('.hidden').toggleClass('hide')
+$('.reg').on('click', function(){
+	$('.hidden').addClass('hide');
+	$('.sign-in').html('РЕГИСТРАЦИЯ');
+	$('.reg').css('display', 'none');
+	$('.signIn').addClass('signInOpen');
+});
+
+$('.signIn').on('click', function(){
+	$('.hidden').removeClass('hide');
+	$('.sign-in').html('ВОЙТИ');
+	$('.reg').css('display', 'block');
+	$('.signIn').removeClass('signInOpen');
 });
