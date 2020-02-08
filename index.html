@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Qvinciy</title>
+    <!--Подключаем стили-->
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!--Подключаем шрифты-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Forum&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo"><img src="/img/adminLogo.png" alt="#" /></div>
+      <div class="content">
+        <div class="left-description">
+          <hr />
+          <p>
+            <span class="color-text">Qvinciy</span> — это рейтинг людей по всему
+            миру. зависящий от цены купленного места
+          </p>
+          <hr />
+        </div>
+        <div class="center-form">
+          <form action="#">
+            <h1>Авторизация</h1>
+            <input
+              placeholder="Логин"
+              style="margin-bottom: 10px;"
+              type="text"
+            />
+            <input placeholder="Пароль" type="text" />
+            <button type="button" onclick="listOpen()">ВОЙТИ</button>
+
+            <a href="#" class="registration">Регистрация</a>
+            <hr />
+            <a href="#" class="forgot">Забыл пароль</a>
+          </form>
+        </div>
+        <div class="right-description">
+          <hr />
+          <p>
+            В свою очередь, место - это показатель того, насколько Вы признаны в
+            рейтинге за счёт своих денежных средств среди остальных участников
+          </p>
+          <hr />
+        </div>
+      </div>
+      <div
+        class="footer"
+        id="footer"
+        onmouseover="footerUp()"
+        onmouseout="footerDown()"
+      >
+        <hr class="before-line" id="line" />
+        <img src="/img/logo.png" alt="" />
+        <div class="content">
+          <div class="left-footer-description">
+            <h1>Подробнее</h1>
+            <hr />
+            <p>
+              <span>Qvinciy -</span> это рейтинг людей по всему миру, зависящий
+              от цены купленного места. В свою очередь, место - это показатель
+              того, насколько Вы признаны в рейтинге за счёт своих денежных
+              средств среди остальных участников.
+            </p>
+          </div>
+          <hr id="between-description" />
+          <div class="center-footer-description">
+            <h1>Договор публичной оферты</h1>
+            <hr />
+            <p>
+              Настоящий договор между владельцами сайта в сети интернет
+              Гаврилова Никиты Александровича и пользователем услуг сайта в сети
+              интернет: именуемым в дальнейшем "покупатель" определяет условия
+              приобретения услуги через сайт *** Настоящий договор - оферта
+              действует с 01 Августа 2019 года.
+            </p>
+          </div>
+          <hr id="between-description" />
+          <div class="right-footer-description">
+            <h1>Пользовательское соглашение</h1>
+            <hr />
+            <p>
+              Настоящее Пользовательское соглашение отвечаю бл* буду регулирует
+              отношения пользователем сети Интернет и владельцем сайта в сети
+              интернет *** при использовании интернет-ресурса *** на условиях,
+              указанных в Пользовательском соглашении.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper-list">
+        <div class="content-list-hidden" id="content-list">
+          <div class="content-list-wrapper">
+            <div class="search-wrapper">
+              <input placeholder="Поиск" class="search" type="search" />
+              <!-- /.search -->
+            </div>
+
+            <div class="header-list">
+              <p>Ранг</p>
+              <p>Номен</p>
+              <p>Ассет</p>
+            </div>
+            <hr class="header-list-line" />
+
+            <div class="list">
+              <ul id="ul">
+                <li id="li">
+                  <div id="wrapperLi">
+                    <div id="left-number" class="left-number">
+                      <a href="#">1</a>
+                    </div>
+                    <div class="center-number">
+                      <a href="#openModal">Nickname</a>
+                    </div>
+                    <div class="right-number"><a href="#">2</a></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="left-panel-wrapper">
+            <div class="arrow"><i class="fas fa-sort-down"></i></div>
+            <!-- /.arrow -->
+            <div class="left-panel">
+              <a class="social-link" href=""
+                ><img src="/img/social/mail.png" alt="#"
+              /></a>
+              <a class="social-link" href=""
+                ><img src="/img/social/telegram.png" alt="#"
+              /></a>
+              <a class="social-link" href=""
+                ><img src="img/social/facebook.png" alt="#"
+              /></a>
+              <a class="social-link" href=""
+                ><img src="img/social/vk.png" alt="#"
+              /></a>
+            </div>
+            <!-- /.left-panel -->
+          </div>
+          <!-- /.left-panel-wrapper -->
+
+          <div id="openModal" class="modal">
+            <div class="modal-dialog">
+              <a href="#close" title="Close" class="close">
+                <img src="/img/close.png" alt="#" />
+              </a>
+              <div class="modal-content">
+                <div class="modal-container">
+                  <div class="info-wrapper">
+                    <div class="info-logo">
+                      <img src="/img/avatar.png" alt="#" />
+                    </div>
+
+                    <div class="info">
+                      <div class="info-inf">
+                        <p class="nomen">Номен</p>
+                        <p class="nickname">Просроченное молоко</p>
+                      </div>
+                      <div class="info-inf">
+                        <div class="asset-wrapper">
+                          <p class="asset">Ассет</p>
+                          <p>13500</p>
+                        </div>
+                        <div class="asset-wrapper rank-wrapper">
+                          <p class="rank">Ранг</p>
+                          <p>1000</p>
+                        </div>
+                      </div>
+                      <div class="info-inf">
+                        <p class="fraction">Фракция</p>
+                        <p>Просроченное молоко</p>
+                      </div>
+                    </div>
+
+                    <div class="social">
+                      <a class="social-link" href="#"
+                        ><img src="img\social\VK logo.png" alt="#"
+                      /></a>
+                      <a class="social-link" href="#"
+                        ><img src="img\social\Instagram logo.png" alt="#"
+                      /></a>
+                      <a class="social-link" href="#"
+                        ><img src="img\social\Twitter logo.png" alt="#"
+                      /></a>
+                    </div>
+                  </div>
+                  <!-- /.info-wrapper -->
+                  <div class="dop-inf">
+                    <p class="dop-information">Информация</p>
+                    <p>лолололол</p>
+                  </div>
+                  <!-- /.dop-inf -->
+                </div>
+                <!-- /.modal-container -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/9cf16fcd0e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
