@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Qvinciy</title>
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!--Подключаем стили-->
+    <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!--Подключаем шрифты-->
@@ -38,13 +39,23 @@
         <div class="center-form">
           <form action="">
             <h1>Авторизация</h1>
-            <input placeholder="Логин" style="margin-bottom: 10px;" type="text"/>
-            <input placeholder="Пароль" style="margin-bottom: 10px;" type="text" />
-			<input type="text" class="hidden" placeholder="Повторить пароль">
-            <button type="button" onclick="listOpen()" class="sign-in">ВОЙТИ</button>
+            <input
+              placeholder="Логин"
+              style="margin-bottom: 10px;"
+              type="text"
+            />
+            <input
+              placeholder="Пароль"
+              style="margin-bottom: 10px;"
+              type="text"
+            />
+            <input type="text" class="hidden" placeholder="Повторить пароль" />
+            <button type="button" onclick="listOpen()" class="sign-in">
+              ВОЙТИ
+            </button>
 
             <a href="#" class="registration reg">Регистрация</a>
-			<a href="#" class="registration signIn">Войти</a>
+            <a href="#" class="registration signIn">Войти</a>
             <hr />
             <a href="#" class="forgot">Забыл пароль</a>
           </form>
@@ -105,6 +116,15 @@
       <div class="wrapper-list">
         <div class="content-list-hidden" id="content-list">
           <div class="content-list-wrapper">
+          <i class="far fa-user home-link"></i>
+
+
+
+            
+
+
+
+
             <div class="search-wrapper">
               <input placeholder="Поиск" class="search" type="search" />
               <!-- /.search -->
@@ -125,7 +145,19 @@
                       <a href="#">1</a>
                     </div>
                     <div class="center-number">
-                      <a href="#openModal">Nickname</a>
+                      <a id="nomen_1" href="#openModal">html - ЯП</a>
+                    </div>
+                    <div class="right-number"><a href="#">1</a></div>
+                  </div>
+                </li>
+
+                <li id="li">
+                  <div id="wrapperLi">
+                    <div id="left-number" class="left-number">
+                      <a href="#">2</a>
+                    </div>
+                    <div class="center-number">
+                      <a id="nomen_2" href="#openModal">Верстальщик</a>
                     </div>
                     <div class="right-number"><a href="#">2</a></div>
                   </div>
@@ -133,6 +165,94 @@
               </ul>
             </div>
           </div>
+
+          <div class="right-panel-wrapper">
+            <img src="/img/close.png" alt="#" class="close-panel">
+            <div class="right-panel">
+              
+              <p class="right-panel-header-title">Профиль</p>
+              <hr class="before-right-panel-header-title" />
+              <p class="right-panel-header-fraction">"Лютик"</p>
+              <div class="right-panel-me">
+                <div class="right-panel-avatar">
+                  <img src="img/avatar.png" alt="#" />
+                </div>
+                <div class="right-panel-about-me">
+                  <div class="right-panel-about-me-wrapper">
+                    <p class="right-panel-about-me-asset">Ассет</p>
+                    <p>10 000.00</p>
+                  </div>
+                  <div class="right-panel-about-me-wrapper">
+                    <p class="right-panel-about-me-rank">Ранг</p>
+                    <p>#12</p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="right-panel-many-button many-in">
+                Ввод средств
+              </button>
+              <button class="right-panel-many-button many-out">
+                Вывод средств
+              </button>
+
+              <form class="form-nomen"><input
+                class="change-input-link change-nomen"
+                type="text"
+                placeholder="Номен"
+              /></form>
+              <form class="form-vk"><input
+                class="change-input-link change-vk"
+                type="text"
+                placeholder="ВКонтакте"
+              /></form>
+              <form class="form-inst"></form><input
+                class="change-input-link change-inst"
+                type="text"
+                placeholder="Instagram"
+              /></form>
+
+              <hr class="before-right-panel-footer" />
+
+              <a href="#" class="exit">Выход</a>
+            </div>
+          </div>
+          <div class="right-panel-dop-wrapper">
+            <div class="right-panel-dop">
+              <p class="right-panel-header-title">Лютик</p>
+              <hr class="before-right-panel-header-title" />
+              <p class="right-panel-header-prof">"Профиль"</p>
+              <div class="right-panel-me">
+                <div class="right-panel-avatar">
+                  <img src="img/avatar.png" alt="#" />
+                </div>
+                <div class="right-panel-about-me">
+                  <div class="right-panel-about-me-wrapper">
+                    <p class="right-panel-about-me-asset">Ассет</p>
+                    <p>10 000.00</p>
+                  </div>
+                  <div class="right-panel-about-me-wrapper">
+                    <p class="right-panel-about-me-rank">Ранг</p>
+                    <p>#12</p>
+                  </div>
+                  <div class="right-panel-about-me-wrapper">
+                    <p class="right-panel-about-me-party">Участников</p>
+                    <p>13</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="click-color">
+                <div class="color color-1"></div>
+                <div class="color color-2"></div>
+                <div class="color color-3"></div>
+                <div class="color color-4"></div>
+                <div class="color color-5"></div>
+              </div>
+            </div>
+          </div>
+
+
 
           <div class="left-panel-wrapper">
             <div class="arrow"><i class="fas fa-sort-down"></i></div>
@@ -160,7 +280,7 @@
               <a href="#close" title="Close" class="close">
                 <img src="img/close.png" alt="#" />
               </a>
-              <div class="modal-content">
+              <div class="modal-content nomen_1">
                 <div class="modal-container">
                   <div class="info-wrapper">
                     <div class="info-logo">
@@ -204,6 +324,55 @@
                   <div class="dop-inf">
                     <p class="dop-information">Информация</p>
                     <p>лолололол</p>
+                  </div>
+                  <!-- /.dop-inf -->
+                </div>
+                <!-- /.modal-container -->
+              </div>
+              <div class="modal-content nomen_2">
+                <div class="modal-container">
+                  <div class="info-wrapper">
+                    <div class="info-logo">
+                      <img src="img/avatar.png" alt="#" />
+                    </div>
+
+                    <div class="info">
+                      <div class="info-inf">
+                        <p class="nomen">Номен</p>
+                        <p class="nickname">Верстальщик</p>
+                      </div>
+                      <div class="info-inf">
+                        <div class="asset-wrapper">
+                          <p class="asset">Ассет</p>
+                          <p>999999</p>
+                        </div>
+                        <div class="asset-wrapper rank-wrapper">
+                          <p class="rank">Ранг</p>
+                          <p>2000</p>
+                        </div>
+                      </div>
+                      <div class="info-inf">
+                        <p class="fraction">Фракция</p>
+                        <p>Создатель</p>
+                      </div>
+                    </div>
+
+                    <div class="social">
+                      <a class="social-link" href="#"
+                        ><img src="img/social/VK logo.png" alt="#"
+                      /></a>
+                      <a class="social-link" href="#"
+                        ><img src="img/social/Instagram logo.png" alt="#"
+                      /></a>
+                      <a class="social-link" href="#"
+                        ><img src="img/social/Twitter logo.png" alt="#"
+                      /></a>
+                    </div>
+                  </div>
+                  <!-- /.info-wrapper -->
+                  <div class="dop-inf">
+                    <p class="dop-information">Информация</p>
+                    <p>Я натурал</p>
                   </div>
                   <!-- /.dop-inf -->
                 </div>
