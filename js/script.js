@@ -137,16 +137,86 @@ $(".signIn").on("click", function() {
   $(".signIn").removeClass("signInOpen");
 });
 
+
+/*  **** Личный кабинет **** */
+//открываем ЛК фракции
 $(".right-panel-header-fraction").on("click", function() {
   $(".right-panel-dop-wrapper").addClass("open-right-panel");
+  $(".right-panel-dop-wrapper").addClass("flipInX");
+  $(".right-panel-dop-wrapper").removeClass("flipOutX");
 });
+//закрываем ЛК фракции
 $(".right-panel-header-prof").on("click", function() {
-  $(".right-panel-dop-wrapper").removeClass("open-right-panel");
+  $(".right-panel-dop-wrapper").removeClass("flipInX");
+  $(".right-panel-dop-wrapper").addClass("flipOutX");
 });
-
+//открываем и закрываем ЛК
 $(".home-link").on("click", function() {
   $(".right-panel-wrapper").addClass("open-right-panel");
+  $(".right-panel-wrapper").addClass("bounceInRight");
+  $(".right-panel-wrapper").removeClass("bounceOutRight");
 });
 $(".close-panel").on("click", function() {
-  $(".right-panel-wrapper").removeClass("open-right-panel");
+  $(".right-panel-wrapper").removeClass("bounceInRight");
+  $(".right-panel-wrapper").addClass("bounceOutRight");
+});
+
+
+
+/*  **** Меняем цвет сайта **** */
+$('.color-1').on('click', function(){
+  $('hr').css('background-color', '#c5994e');
+  $('.arrow').css('background-color', '#c5994e');
+  $('i').css('color', '#c5994e');
+  $('.header-list > p').css('color', '#c5994e');
+  $('.right-panel-wrapper').css('border-color', '#c5994e');
+  $('.search').css('border-color', '#c5994e');
+});
+$('.color-2').on('click', function(){
+  $('hr').css('background-color', '#fff');
+  $('.arrow').css('background-color', '#fff');
+  $('i').css('color', '#fff');
+  $('.header-list > p').css('color', '#fff');
+  $('.right-panel-wrapper').css('border-color', '#fff');
+  $('.list').css('border-color', '#fff');
+  $('.search').css('border-color', '#fff');
+  $('.info').css('border-color', 'green');
+  $('.asset-wrapper').css('border-color', 'green');
+  $('.modal-content').css('border-color', 'green');
+});
+$('.color-3').on('click', function(){
+  $('hr').css('background-color', 'green');
+  $('.arrow').css('background-color', 'green');
+  $('i').css('color', 'green');
+  $('.header-list > p').css('color', 'green');
+  $('.right-panel-wrapper').css('border-color', 'green');
+  $('.list').css('border-color', 'green');
+  $('.search').css('border-color', 'green');
+  $('.info').css('border-color', 'green');
+  $('.asset-wrapper').css('border-color', 'green');
+  $('.modal-content').css('border-color', 'green');
+});
+$('.color-4').on('click', function(){
+  $('hr').css('background-color', 'red');
+  $('.arrow').css('background-color', 'red');
+  $('i').css('color', 'red');
+  $('.header-list > p').css('color', 'red');
+  $('.right-panel-wrapper').css('border-color', 'red');
+  $('.list').css('border-color', 'red');
+  $('.search').css('border-color', 'red');
+  $('.info').css('border-color', 'red');
+  $('.asset-wrapper').css('border-color', 'red');
+  $('.modal-content').css('border-color', 'red');
+});
+$('.color-5').on('click', function(){
+  $('hr').css('background-color', 'cyan');
+  $('.arrow').css('background-color', 'cyan');
+  $('i').css('color', 'cyan');
+  $('.header-list > p').css('color', 'cyan');
+  $('.right-panel-wrapper').css('border-color', 'cyan');
+  $('.list').css('border-color', 'cyan');
+  $('.search').css('border-color', 'cyan');
+  $('.info').css('border-color', 'cyan');
+  $('.asset-wrapper').css('border-color', 'cyan');
+  $('.modal-content').css('border-color', 'cyan');
 });
