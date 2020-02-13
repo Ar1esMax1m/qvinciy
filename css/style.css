@@ -139,6 +139,7 @@ hr {
   opacity: 0.66;
   background-color: #c5994e;
   height: 1px;
+  margin-top: 0;
 }
 .before-line {
   width: 1000px;
@@ -150,24 +151,30 @@ hr {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  font-family: "Forum", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px; 
 }
-#footer .content h1 {
-  color: coral;
-  font-size: 20px;
-  font-family: "Source Code Pro", monospace; /* Russian */
+#footer .content h1, span {
+  font-family: "Forum", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;  
+  color: #C5994E
 }
+
 #footer .content hr {
   width: 25px;
   height: 2px;
+  background-color: #C5994E;
 }
 #footer .content div {
-  width: 300px;
+  width: 400px;
   height: 300px;
   transition: 0.2s;
 }
-#footer .content div:hover {
-  width: 500px;
-}
+
 .footer {
   bottom: -305px;
 }
@@ -175,16 +182,123 @@ hr {
   bottom: 0;
 }
 #footer .content .between-description {
-  height: 230px;
+  height: 100px;
   width: 1px;
   margin: 0;
+  margin-top: -90px;
+  background-color: #C5994E;
 }
 .left-footer-description {
-  margin-left: 10%;
+  margin-left: 20px;
 }
 .right-footer-description {
-  margin-right: 10%;
+  margin-right: 20px;
 }
+.modal-footer-link{
+  cursor: pointer;
+}
+.modal-footer-link-h1{
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.center-footer-description-p, .right-footer-description-p, .left-footer-description-p{
+  overflow: hidden;
+}
+.contacts-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 63px;
+  bottom: 25px;
+}
+.contacts{
+  display: flex;
+  align-items: flex-start;
+}
+.contacts hr{
+  transform: rotate(90deg);
+}
+.modal-footer {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* цвет фона */
+  z-index: 1050;
+  opacity: 0; /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none; /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content-wrapper{
+  padding: 20px;
+  border: 3px double #C5994E;
+  background-color: #0D0D17;
+}
+.modal-content-footer{
+  border-right: 1px solid #C5994E;
+  width: 645px;
+  height: 660px;
+  background-color: #0D0D17;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+.dogovor-wrapper{
+  margin-top: 15px;
+  margin-left: 22px;
+  margin-right: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.h1-dogovor, .p-dogovor, .text-dogovor>p{
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'El Messiri', sans-serif;
+}
+.h1-dogovor{
+  color: #C5994E;
+  margin-bottom: 0;
+}
+.p-dogovor{
+  color: #fff;
+  line-height: 28px;
+}
+.hr-dogovor{
+  width: 100px;
+  margin: 0;
+  height: 1px;
+  background-color: #C5994E;
+}
+.text-dogovor{
+  margin-left: 22px;
+  margin-right: 22px;
+}
+.text-dogovor>p{
+  color: #fff;
+  font-size: 15px;
+  line-height: 23px;
+}
+.close-footer{
+  cursor: pointer;
+  margin-top: -700px;
+  transition: 0.3s;
+}
+.close-footer:hover{
+  transform: rotate(90deg);
+}
+
 
 /* Список при нажатии на кнопку войти*/
 .wrapper-list {
@@ -582,16 +696,12 @@ hr {
   transform: rotate(90deg);
 }
 /* Поиск */
-.search-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-}
 .search {
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  top: 60px;
   position: relative;
-  top: -45.5px;
   display: block;
   margin: auto;
   border: none;
@@ -604,9 +714,7 @@ hr {
   color: #fff;
   padding: 20px;
 }
-.search-active {
-  top: 30px;
-}
+
 
 /* Модальное окно */
 

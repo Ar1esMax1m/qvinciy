@@ -14,6 +14,60 @@ function footerDown() {
   document.getElementById("line").classList.add("before-line");
 }
 
+//добавляем текст при наведении 
+function rightTextAdd(){
+let p = $('.right-footer-description-p');
+p.html('Пользовательского соглашения является совершение действий Пользователем, которые направлены на использование Сайта, включая, но не ограничиваясь: подача, просмотр, оплата услуг, участие в рейтинге, направление сообщений Администрации сайта, и иные действия по использованию функциональности Сайта. Владелец сайта в сети интеренет имеет право в любое время в одностороннем порядке вносить изменения в Пользовательское соглашения без какого-либо специального уведомления об этом Пользователя. Новая редакция Пользовательского соглашения ');
+$('.center-footer-description').css('width', '270px');
+$('.left-footer-description').css('width', '270px');
+$('.right-footer-description').css('width', '641px');
+}
+function centerTextAdd(){
+  let p = $('.center-footer-description-p');
+  p.html('Настоящий договор между владельцем сайта в сети интернет Гаврилова Никиты Александровича и пользователем услуг сайта в сети интернет, именуемым в дальнейшем «Покупатель» определяет условия приобретения услуги через сайт <br \/> 1. ОБЩИЕ ПОЛОЖЕНИЯ <br \/> 1.1. Владелец сайта в сети интернет публикует настоящий договор, являющийся публичным');
+  $('.right-footer-description').css('width', '270px');
+  $('.left-footer-description').css('width', '270px');
+  $('.center-footer-description').css('width', '641px');
+}
+//удаляем текст при наведении
+function rightTextDelete(){
+  let p = $('.right-footer-description-p');
+  p.html('Настоящее Пользовательское соглашение регулирует отношения между пользователем сети Интернет (далее - Пользователь) и владельцем сайта в сети интернет http://qvinciy.ru, возникающие при использовании интернет-ресурса http://qvinciy.ru, на условиях,  указанных в Пользовательском соглашении.');
+  $('.center-footer-description').css('width', '400px');
+  $('.left-footer-description').css('width', '400px');
+  $('.right-footer-description').css('width', '400px');
+}
+function centerTextDelete(){
+  let p = $('.center-footer-description-p');
+  p.html('Настоящий договор между владельцем сайта в сети интернет Гаврилова Никиты Александровича и пользователем услуг сайта в сети интернет, именуемым в дальнейшем «Покупатель» определяет условия приобретения услуги через сайт http://qvinciy.ru Настоящий договор – оферта действует с 01 Августа 2019 года.');
+  $('.right-footer-description').css('width', '400px');
+  $('.left-footer-description').css('width', '400px');
+  $('.center-footer-description').css('width', '400px');
+}
+//модальное окно
+$('.modal-footer-link').on('click', function(){
+let modal = $('.modal-footer');
+modal.css('opacity', '1')
+modal.css('pointer-events', 'auto');
+});
+$('.close-footer').on('click', function(){
+  let modal = $('.modal-footer');
+  modal.css('opacity', '0')
+  modal.css('pointer-events', 'none');
+});
+//скрываем окно при клике за его пределами
+$(document).mouseup(function (e){ // событие клика по веб-документу
+  var div = $(".modal-content-footer"); // тут указываем ID элемента
+  if (!div.is(e.target) // если клик был не по нашему блоку
+      && div.has(e.target).length === 0) { // и не по его дочерним элементам
+
+        let modal = $('.modal-footer');
+        modal.css('opacity', '0')
+        modal.css('pointer-events', 'none');// скрываем его
+  }
+});
+
+
 /*  ****Список**** */
 // Открытие списка
 function listOpen() {
@@ -56,7 +110,16 @@ $(".close").on("click", function() {
   $(".modal-content").removeClass("modal-content-full");
   $(".modal-container").removeClass("modal-container-full");
 });
-// Функция getListContent()
+
+//скрываем окно при клике за его пределами
+$(document).mouseup(function (e){ // событие клика по веб-документу
+  var div = $(".modal-dialog"); // тут указываем ID элемента
+  if (!div.is(e.target) // если клик был не по нашему блоку
+      && div.has(e.target).length === 0) { // и не по его дочерним элементам
+
+      location.hash = '#close';
+  }
+});
 /*
 function getListContent() {
   let fragment = new DocumentFragment();
@@ -91,7 +154,7 @@ panel.addEventListener("mouseout", function() {
 
 /*  **** Поиск **** */
 // Поиск по списку
-$(".search-wrapper input").on("input", function() {
+$(".search").on("input", function() {
   var str = $(this)
     .val()
     .toLowerCase();
@@ -111,15 +174,22 @@ $(".search-wrapper input").on("input", function() {
   }
 });
 // Открытие поиска
-var headerSearch = document.querySelector(".search-wrapper");
-var search = document.querySelector(".search");
+$('.search-link').on('mouseover', function(){
+  $('.search-link').html('Поиск');
+});
+$('.search-link').on('mouseout', function(){
+  $('.search-link').html('Номен');
+});
+$('.search').on('mouseout', function(){
+  $('.search').css('opacity', '0');
+  $('.search').css('pointer-events', 'none');
+});
+$('.search-link').on('click', function(){
+  $('.search').css('opacity', '1');
+  $('.search').css('pointer-events', 'auto');
+  $('.search').focus();
+});
 
-headerSearch.addEventListener("mouseover", function() {
-  search.classList.add("search-active");
-});
-headerSearch.addEventListener("mouseout", function() {
-  search.classList.remove("search-active");
-});
 
 /*  **** Регистрация **** */
 // добавление поля регистрации
@@ -163,60 +233,3 @@ $(".close-panel").on("click", function() {
 
 
 
-/*  **** Меняем цвет сайта **** */
-$('.color-1').on('click', function(){
-  $('hr').css('background-color', '#c5994e');
-  $('.arrow').css('background-color', '#c5994e');
-  $('i').css('color', '#c5994e');
-  $('.header-list > p').css('color', '#c5994e');
-  $('.right-panel-wrapper').css('border-color', '#c5994e');
-  $('.search').css('border-color', '#c5994e');
-});
-$('.color-2').on('click', function(){
-  $('hr').css('background-color', '#fff');
-  $('.arrow').css('background-color', '#fff');
-  $('i').css('color', '#fff');
-  $('.header-list > p').css('color', '#fff');
-  $('.right-panel-wrapper').css('border-color', '#fff');
-  $('.list').css('border-color', '#fff');
-  $('.search').css('border-color', '#fff');
-  $('.info').css('border-color', 'green');
-  $('.asset-wrapper').css('border-color', 'green');
-  $('.modal-content').css('border-color', 'green');
-});
-$('.color-3').on('click', function(){
-  $('hr').css('background-color', 'green');
-  $('.arrow').css('background-color', 'green');
-  $('i').css('color', 'green');
-  $('.header-list > p').css('color', 'green');
-  $('.right-panel-wrapper').css('border-color', 'green');
-  $('.list').css('border-color', 'green');
-  $('.search').css('border-color', 'green');
-  $('.info').css('border-color', 'green');
-  $('.asset-wrapper').css('border-color', 'green');
-  $('.modal-content').css('border-color', 'green');
-});
-$('.color-4').on('click', function(){
-  $('hr').css('background-color', 'red');
-  $('.arrow').css('background-color', 'red');
-  $('i').css('color', 'red');
-  $('.header-list > p').css('color', 'red');
-  $('.right-panel-wrapper').css('border-color', 'red');
-  $('.list').css('border-color', 'red');
-  $('.search').css('border-color', 'red');
-  $('.info').css('border-color', 'red');
-  $('.asset-wrapper').css('border-color', 'red');
-  $('.modal-content').css('border-color', 'red');
-});
-$('.color-5').on('click', function(){
-  $('hr').css('background-color', 'cyan');
-  $('.arrow').css('background-color', 'cyan');
-  $('i').css('color', 'cyan');
-  $('.header-list > p').css('color', 'cyan');
-  $('.right-panel-wrapper').css('border-color', 'cyan');
-  $('.list').css('border-color', 'cyan');
-  $('.search').css('border-color', 'cyan');
-  $('.info').css('border-color', 'cyan');
-  $('.asset-wrapper').css('border-color', 'cyan');
-  $('.modal-content').css('border-color', 'cyan');
-});
